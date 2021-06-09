@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:ci_drawable="@drawable/white_radius_circle_indicator"
+            app:ci_drawable_unselected="@drawable/black_radius_circle_indicator"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view_pager" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="NETFLIX ORIGINALS"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/original_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/original_recyclerView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:text="Action Movies"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/trending_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text2" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/trending_recyclerView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:text="Top Rated"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/toprated_recyclerVire"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

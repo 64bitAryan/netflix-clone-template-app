@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/original_imageView"
+        android:scaleType="centerCrop"
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:padding="8dp"
+        app:srcCompat="@drawable/venom"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/original_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Venom"
+        android:textStyle="bold"
+        android:maxLength="10"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@+id/original_imageView"
+        app:layout_constraintRight_toRightOf="@+id/original_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/original_imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
